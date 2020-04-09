@@ -16,5 +16,9 @@ const html = pug.renderFile('./views/posts.pug', {
 });
 
 // スクリプトタグがエスケープされて含まれていることをチェック
-assert(html.includes(`&lt;script&gt;alert('test');&lt;/script&gt;`))
+assert(html.includes(`&lt;script&gt;alert('test');&lt;/script&gt;`));
+// IDにトラッキングIDのハイフンより前半のみが含まれているか
+assert(html.includes('4530744991697575'));
+// IDにトラッキングIDのハイフンより後半が含まれていないか
+assert(!html.includes('772458356ace297c43c815f6d09208443c32edd9'));
 console.log('テストが正常に完了しました');
