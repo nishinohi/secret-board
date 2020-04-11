@@ -17,6 +17,6 @@
     "sequelize": "4.33.4"
   },
   "engines": {
-    "node": "-10"
+    "node": "~10"
   }
 }
